@@ -1,11 +1,17 @@
 ﻿using System;
 namespace SpinningDiscs
 {
-    public class DVD
+    public class DVD : BaseDisc, IStorageDisc
     {
-        // TODO: Implement your custom interface.
+        public DVD (string name, int capacity) : base(name, capacity) 
+        {
+            MinSpinRate = 560;
+            MaxSpinRate = 1600;
+        }
 
-        // TODO: Determine which fields, methods, and constructors can be extended from the base class and which ones
-        //  need to be declared separately.
+        public void SpinDisc()
+        {
+            Console.WriteLine($"{Name} ({this.GetType().Name}) spins at between {MinSpinRate}rpm and {MaxSpinRate}rpm.");
+        }
     }
 }

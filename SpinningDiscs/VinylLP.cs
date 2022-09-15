@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace SpinningDiscs
 {
-    public class CD : BaseDisc, IStorageDisc
+    public class VinylLP : BaseDisc, IStorageDisc
     {
-        public CD (string name, int capacity) : base(name, capacity) 
+        public VinylLP(string name, int capacity) : base(name, capacity)
         {
-            MinSpinRate = 200;
-            MaxSpinRate = 500;
+            MinSpinRate = 33;
+            MaxSpinRate = 78;
         }
 
         public void SpinDisc()

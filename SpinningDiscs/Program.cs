@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SpinningDiscs
 {
@@ -6,9 +7,18 @@ namespace SpinningDiscs
     {
         static void Main(string[] args)
         {
-            // TODO: Declare and initialize a CD and a DVD object.
+            List<IStorageDisc> AllMyDiscs = new List<IStorageDisc>(){
+                new CD("Linkin Park - Meteora", 1024),
+                new DVD("The Fellowship of the Ring Extended Edition", 2048),
+                new VinylLP("Chillhop Fall Essentials 2021", 128),
+                new Floppy("Windows 3.1 Install Disk", 16)
+            };
 
-            // TODO: Call each CD and DVD method to verify that they work as expected.
+            foreach(IStorageDisc disc in AllMyDiscs)
+            {
+                disc.SpinDisc();
+            }
+
         }
     }
 }
