@@ -6,8 +6,11 @@ namespace SpinningDiscs
 {
     public class Floppy : BaseDisc, IStorageDisc
     {
-        public Floppy(string name, int capacity) : base(name, capacity)
+        public bool IsRewritable { get; set; } = true;
+        public int Capacity { get; set; }
+        public Floppy(string name, int capacity) : base(name)
         {
+            Capacity = capacity;
             MinSpinRate = 1;
             MaxSpinRate = 4;
         }

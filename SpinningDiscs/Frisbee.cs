@@ -4,7 +4,8 @@ using System.Text;
 
 namespace SpinningDiscs
 {
-    public class Frisbee
+    public class Frisbee : BaseDisc
     {
+        public Frisbee(string name) : base(name) { }
     }
 }

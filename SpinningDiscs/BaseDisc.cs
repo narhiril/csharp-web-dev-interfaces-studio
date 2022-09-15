@@ -10,14 +10,10 @@ namespace SpinningDiscs
         public int MaxSpinRate { get; set; }
 
         public string Name { get; set; }
-        public int Capacity { get; set; }
 
-        public bool IsRewritable { get; set; } = false;
-
-        public BaseDisc(string name, int capacity)
+        public BaseDisc(string name)
         {
             Name = name;
-            Capacity = capacity;
         }
 
     }

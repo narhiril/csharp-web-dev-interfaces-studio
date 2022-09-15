@@ -3,8 +3,11 @@ namespace SpinningDiscs
 {
     public class DVD : BaseDisc, IStorageDisc
     {
-        public DVD (string name, int capacity) : base(name, capacity) 
+        public bool IsRewritable { get; set; } = false;
+        public int Capacity { get; set; }
+        public DVD (string name, int capacity) : base(name)
         {
+            Capacity = capacity;
             MinSpinRate = 560;
             MaxSpinRate = 1600;
         }

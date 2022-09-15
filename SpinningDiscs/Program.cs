@@ -11,10 +11,11 @@ namespace SpinningDiscs
                 new CD("Linkin Park - Meteora", 1024),
                 new DVD("The Fellowship of the Ring Extended Edition", 2048),
                 new VinylLP("Chillhop Fall Essentials 2021", 128),
-                new Floppy("Windows 3.1 Install Disk", 16)
+                new Floppy("Windows 3.1 Install Disk", 16),
             };
+            var waitAMinuteHowDidThisGetHere = new Frisbee("My Sister's Dog's Favorite Toy");
 
-            foreach(IStorageDisc disc in AllMyDiscs)
+            foreach (IStorageDisc disc in AllMyDiscs)
             {
                 disc.SpinDisc();
             }

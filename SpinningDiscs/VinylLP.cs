@@ -6,8 +6,11 @@ namespace SpinningDiscs
 {
     public class VinylLP : BaseDisc, IStorageDisc
     {
-        public VinylLP(string name, int capacity) : base(name, capacity)
+        public bool IsRewritable { get; set; } = false;
+        public int Capacity { get; set; }
+        public VinylLP(string name, int capacity) : base(name)
         {
+            Capacity = capacity;
             MinSpinRate = 33;
             MaxSpinRate = 78;
         }
